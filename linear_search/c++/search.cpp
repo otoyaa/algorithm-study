@@ -3,8 +3,7 @@ using namespace std;
 
 int search(int arr[], int n, int number_target)
 {
-    int i; // create index variable
-    for (i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
         if (arr[i] == number_target)
             return i;
     return -1;
