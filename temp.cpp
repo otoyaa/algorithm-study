@@ -1,14 +1,14 @@
-                /* 🔰 Natus*/
+                       /* 🔰 Natus*/
 #include <bits/stdc++.h>          
-#define endl '\n';
-typedef long long ll;
 using namespace std;
+#define endl '\n';
+#define 八尺瓊勾玉 cin.tie(0),ios::sync_with_stdio(0);
+typedef long long ll;
 
 void solve(){
 }
 
 int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);cout.tie(0);   
+    八尺瓊勾玉
     solve();
 }
