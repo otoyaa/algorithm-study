@@ -3,6 +3,7 @@
 using namespace std;
 
 #define sbt(x) (x).begin(),(x).end()
+#define gyaku(x) reverse((x).begin(),(x).end())
 typedef long long ll;
 const ll mod=1000000007;
 
@@ -10,9 +11,9 @@ struct 光線{
     光線(){
         ios::sync_with_stdio(0);
         cin.tie(0);
+        cout<<fixed<<setprecision(15);
     }
 }光線;
 
 int main(){
 }
-
