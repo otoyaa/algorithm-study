@@ -33,3 +33,4 @@ struct 光線{
 
 int main(){
 }
+
