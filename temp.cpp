@@ -1,9 +1,13 @@
 #include <bits/stdc++.h>    
 using namespace std;
+using ll=long long;
+using dll=long double;
 
+#define int ll
+#define double dll
 #define sbt(x) (x).begin(),(x).end()
 #define gyaku(x) reverse((x).begin(),(x).end())
-typedef long long ll;
+
 typedef unsigned long long ull;
 
 const ll mod=1000000007;
@@ -31,6 +35,5 @@ struct 光線{
     }
 }光線;
 
-int main(){
+signed main(){
 }
-
