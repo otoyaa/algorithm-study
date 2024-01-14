@@ -13,6 +13,8 @@ typedef unsigned long long ull;
 
 const ll mod=1000000007;
 const ll INF= 1LL << 60;
+const int dx[] = {0, 0, 1, -1};
+const int dy[] = {1, -1, 0, 0};
 
 template<class t,class u> void chmax(t&a,u b){if(a<b)a=b;}
 template<class t,class u> void chmin(t&a,u b){if(b<a)a=b;}
