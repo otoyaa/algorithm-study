@@ -3,6 +3,7 @@ using namespace std;
 using ll=long long;
 using dll=long double;
 using pq=priority_queue<int,vector<int>,greater<int>>;
+using graph=vector<vector<int>>;
 
 #define int ll
 #define double dll
@@ -14,8 +15,11 @@ typedef unsigned long long ull;
 const ll mod=1000000007;
 const ll INF= 1LL << 60;
 
-const int dx[4] = {1, 0, -1, 0};
-const int dy[4] = {0, 1, 0, -1};
+const int dx[8] = {1, 0, -1, 0, 1, 1, -1, -1};
+const int dy[8] = {0, 1, 0, -1, -1, 1, -1, 1};
+
+// const int dx[4] = {1,0,-1,0}; 
+// const int dy[4] = {0,1,0,-1};
 
 template<class t,class u> void chmax(t&a,u b){if(a<b)a=b;}
 template<class t,class u> void chmin(t&a,u b){if(b<a)a=b;}
@@ -66,4 +70,3 @@ struct 光線{
 
 signed main(){
 }
-
