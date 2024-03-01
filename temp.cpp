@@ -8,23 +8,32 @@ using graph=vector<vector<int>>;
 #define int ll
 #define double dll
 #define sbt(x) (x).begin(),(x).end()
-#define gyaku(x) reverse((x).begin(),(x).end())
+#define gyaku(x) reverse(sbt(x));
 
 typedef unsigned long long ull;
 
 const ll mod=1000000007;
-const ll INF= 1LL << 60;
+const ll mint=998244353;
+const ll INF=1LL<<60;
 
 const int dx[8] = {1, 0, -1, 0, 1, 1, -1, -1};
 const int dy[8] = {0, 1, 0, -1, -1, 1, -1, 1};
 
-// const int dx[4] = {1,0,-1,0}; 
-// const int dy[4] = {0,1,0,-1};
+const int dx4[4] = {1,0,-1,0}; 
+const int dy4[4] = {0,1,0,-1};
 
 template<class t,class u> void chmax(t&a,u b){if(a<b)a=b;}
 template<class t,class u> void chmin(t&a,u b){if(b<a)a=b;}
 
-ull mp(ull a,ull b,ull mod){
+int gcd(int a,int b){
+    return b?gcd(b,a%b):a;
+}
+
+int lcm(int a,int b){
+    return a/gcd(a,b)*b;
+}
+
+ull powm(ull a,ull b,ull mod){
     ull p=a,ans=1;
     for(int i=0;i<60;++i){
         if((b&(1ll<<i))!=0){
