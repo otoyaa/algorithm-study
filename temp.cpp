@@ -8,7 +8,9 @@ using graph=vector<vector<int>>;
 #define int ll
 #define double dll
 #define sbt(x) (x).begin(),(x).end()
-#define gyaku(x) reverse(sbt(x));
+#define gyaku(x) reverse(sbt(x))
+#define vset(x) x.erase(unique(x.begin(),x.end()),x.end())
+#define sortu(x) sort(x.begin(),x.end())
 
 typedef unsigned long long ull;
 
@@ -79,3 +81,4 @@ struct 光線{
 
 signed main(){
 }
+
