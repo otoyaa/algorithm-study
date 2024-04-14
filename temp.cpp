@@ -10,7 +10,7 @@ using graph=vector<vector<int>>;
 #define sbt(x) (x).begin(),(x).end()
 #define gyaku(x) reverse(sbt(x))
 #define vset(x) x.erase(unique(x.begin(),x.end()),x.end())
-#define sortu(x) sort(x.begin(),x.end())
+#define so(x) sort(x.begin(),x.end())
 
 typedef unsigned long long ull;
 
@@ -46,7 +46,7 @@ ull powm(ull a,ull b,ull mod){
     return ans;
 }
 
-/*struct UnionFind{
+struct UnionFind{
     vector<int> par,rank,siz;
     UnionFind(int no):par(no,-1),rank(no,0),siz(no,1){  }
 
@@ -69,7 +69,36 @@ ull powm(ull a,ull b,ull mod){
     int size(int x){
         return siz[root(x)];
     }
-};*/
+};
+
+struct segki{
+    int size=1;
+    vector<int> seg;
+
+    void b(int sz){
+        while(size<=sz)size*=2;
+        seg.resize(size*2,INF);
+    }
+    void update(int pos,int x){
+        pos+=size;
+        seg[pos]=x;
+        while(pos>1){
+            pos>>=1; // mid
+            seg[pos]=min(seg[pos*2],seg[pos*2+1]);
+        }
+    }
+    int query(int l,int r,int a,int b,int pos){
+        if(r<=a||b<=l)return INF;
+        if(l<=a&&b<=r)return seg[pos];
+        int m=(l+r)/2;
+        int x=query(a,b,2*pos,l,m);
+        int y=query(a,b,2*pos+1,m+1,r);
+        return min(x,y);
+    }
+    int queryp(int l,int r){
+        return query(l,r,0,size,1);
+    }
+};
 
 struct 光線{
     光線(){
@@ -81,4 +110,3 @@ struct 光線{
 
 signed main(){
 }
-
