@@ -82,21 +82,20 @@ struct segki{
     void update(int pos,int x){
         pos+=size;
         seg[pos]=x;
-        while(pos>1){
+        while(pos>=1){
             pos>>=1; // mid
             seg[pos]=min(seg[pos*2],seg[pos*2+1]);
         }
     }
-    int query(int l,int r,int a,int b,int pos){
-        if(r<=a||b<=l)return INF;
+    int _query(int l,int r,int a,int b,int pos){
         if(l<=a&&b<=r)return seg[pos];
-        int m=(l+r)/2;
-        int x=query(a,b,2*pos,l,m);
-        int y=query(a,b,2*pos+1,m+1,r);
+        if(r<=a||b<=l)return INF;
+        int x=_query(l,r,a,(a+b)/2,pos*2);
+        int x=_query(l,r,(a+m)/2,b,pos*2+1);
         return min(x,y);
     }
-    int queryp(int l,int r){
-        return query(l,r,0,size,1);
+    int query(int l,int r){
+        return _query(l,r,0,size,1);
     }
 };
 
@@ -110,3 +109,4 @@ struct 光線{
 
 signed main(){
 }
+
