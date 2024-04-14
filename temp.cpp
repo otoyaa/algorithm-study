@@ -91,7 +91,7 @@ struct segki{
         if(l<=a&&b<=r)return seg[pos];
         if(r<=a||b<=l)return INF;
         int x=_query(l,r,a,(a+b)/2,pos*2);
-        int x=_query(l,r,(a+m)/2,b,pos*2+1);
+        int y=_query(l,r,(a+b)/2,b,pos*2+1);
         return min(x,y);
     }
     int query(int l,int r){
