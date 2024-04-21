@@ -15,12 +15,11 @@ using graph=vector<vector<int>>;
 typedef unsigned long long ull;
 
 const ll mod=1000000007;
-const ll mint=998244353;
+const ll modint=998244353;
 const ll INF=1LL<<60;
 
 const int dx[8] = {1, 0, -1, 0, 1, 1, -1, -1};
 const int dy[8] = {0, 1, 0, -1, -1, 1, -1, 1};
-
 const int dx4[4] = {1,0,-1,0}; 
 const int dy4[4] = {0,1,0,-1};
 
@@ -54,10 +53,10 @@ struct UnionFind{
         if(par[x]==-1)return x;
         else return par[x]=root(par[x]);
     }
-    bool issame(int x,int y){
+    bool onaji(int x,int y){
         return root(x)==root(y);
     }
-    bool unite(int x,int y){
+    bool _union(int x,int y){
         int rx=root(x),ry=root(y);
         if(rx==ry)return false;
         if(rank[rx]<rank[ry])swap(rx,ry);
