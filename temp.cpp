@@ -12,11 +12,18 @@ using graph=vector<vector<int>>;
 #define vset(x) x.erase(unique(x.begin(),x.end()),x.end())
 #define so(x) sort(x.begin(),x.end())
 
+// fogo na bomba
+#define fi first
+#define se second
+#define vi vector<int>
+#define r() cout<<'\n'
+
 typedef unsigned long long ull;
 
 const ll mod=1000000007;
 const ll modint=998244353;
 const ll INF=1LL<<60;
+const double pi=3.141592653589793;
 
 const int dx[8] = {1, 0, -1, 0, 1, 1, -1, -1};
 const int dy[8] = {0, 1, 0, -1, -1, 1, -1, 1};
@@ -25,6 +32,14 @@ const int dy4[4] = {0,1,0,-1};
 
 template<class t,class u> void chmax(t&a,u b){if(a<b)a=b;}
 template<class t,class u> void chmin(t&a,u b){if(b<a)a=b;}
+
+template<class T>
+istream &operator>>(istream &is,vector<T>&v){
+    for(T &t:v){
+        is>>t;
+    }
+    return is;
+}
 
 int gcd(int a,int b){
     return b?gcd(b,a%b):a;
@@ -53,7 +68,7 @@ struct UnionFind{
         if(par[x]==-1)return x;
         else return par[x]=root(par[x]);
     }
-    bool onaji(int x,int y){
+    bool same(int x,int y){
         return root(x)==root(y);
     }
     bool _union(int x,int y){
