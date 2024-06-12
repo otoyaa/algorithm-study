@@ -12,7 +12,7 @@ using graph=vector<vector<int>>;
 #define vset(x) x.erase(unique(x.begin(),x.end()),x.end())
 #define so(x) sort(x.begin(),x.end())
 
-// fogo na bomba
+// えーりん！えーりん！助けて！
 #define fi first
 #define se second
 #define vi vector<int>
@@ -29,6 +29,9 @@ const int dx[8] = {1, 0, -1, 0, 1, 1, -1, -1};
 const int dy[8] = {0, 1, 0, -1, -1, 1, -1, 1};
 const int dx4[4] = {1,0,-1,0}; 
 const int dy4[4] = {0,1,0,-1};
+const string YesNo[2]={"No","Yes"};
+void Yes(int ok=1){cout<<YesNo[ok]<<'\n';}
+
 
 template<class t,class u> void chmax(t&a,u b){if(a<b)a=b;}
 template<class t,class u> void chmin(t&a,u b){if(b<a)a=b;}
@@ -123,4 +126,3 @@ struct 光線{
 
 signed main(){
 }
-
