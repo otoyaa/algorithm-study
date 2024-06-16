@@ -6,16 +6,18 @@ using pq=priority_queue<int,vector<int>,greater<int>>;
 using graph=vector<vector<int>>;
 
 #define int ll
-#define double dll
+#define db dll
 #define sbt(x) (x).begin(),(x).end()
 #define gyaku(x) reverse(sbt(x))
 #define vset(x) x.erase(unique(x.begin(),x.end()),x.end())
 #define so(x) sort(x.begin(),x.end())
 
-// えーりん！えーりん！助けて！
+/*eriNNNNNNNNNNNNNNN*/
 #define fi first
 #define se second
 #define vi vector<int>
+#define P pair<int,int>
+#define pb push_back
 #define r() cout<<'\n'
 
 typedef unsigned long long ull;
@@ -126,3 +128,4 @@ struct 光線{
 
 signed main(){
 }
+
