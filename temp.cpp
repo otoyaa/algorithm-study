@@ -37,7 +37,7 @@ void Yes(int ok=1){cout<<YesNo[ok]<<'\n';}
 
 template<class t,class u> void chmax(t&a,u b){if(a<b)a=b;}
 template<class t,class u> void chmin(t&a,u b){if(b<a)a=b;}
-
+template<typename T> void out(const T&x){cout<<x;r();}
 template<class T>
 istream &operator>>(istream &is,vector<T>&v){
     for(T &t:v){
