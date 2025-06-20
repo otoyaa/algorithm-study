@@ -118,13 +118,20 @@ struct segki{
     }
 };
 
-struct aco_my_sunshine{
-    aco_my_sunshine(){
+struct eu{
+    eu(){
         ios::sync_with_stdio(0);
         cin.tie(0);
         cout<<fixed<<setprecision(15);
     }
-}aco_my_sunshine;
+}eu;
+
+#define OTOYA_LOCAL
+#ifdef OTOYA_LOCAL
+#define dbg(x) cerr << #x << " = " << (x) << " (L" << __LINE__ << ")\n"
+#else
+#define dbg(x)
+#endif
 
 signed main(){
 }
